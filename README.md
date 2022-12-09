@@ -100,6 +100,18 @@ The structure of the puzzle itself is then based on the device in question, to a
 | --- | --- |
 | ![Puzzle & Hints - Desktop](readme/puzzle-desktop.png)| ![Puzzle & Hints - Mobile](readme/puzzle-mobile.png)
 
+#### Progression
+
+When a user accesses the site for the first time in a day, the hint section will be empty and there will be a small snippet of the daily image available to view. If they guess correctly or guess incorrectly 6 times, the full image will then be displayed. Otherwise, as the user guesses incorrectly prior to the results being displayed, an additional hint will be provided or more of the image will be revealed as the guesses continue.
+
+| Daily Puzzle(0 Guesses) | Daily Puzzle(3 Guesses) | Daily Puzzle(All Guesses)
+| --- | --- | --- |
+| ![Daily Puzzle - 0](readme/puzzle0.png) | ![Daily Puzzle - 3](readme/puzzle3.png) | ![Daily Puzzle - All](readme/puzzle6.png) |
+
+| Hint List(0 Guesses) | Hint List(3 Guesses) | Hint List(All Guesses)
+| --- | --- | --- |
+| ![Hint List - 0](readme/hint0.png) | ![Hint List - 3](readme/hints3.png) | ![Hint List - All](readme/hints6.png) |
+
 
 ### Future Plans
 
