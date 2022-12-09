@@ -43,17 +43,14 @@ The inspiration for this site came from the recent trend of daily puzzle games b
 
 ### First Time User
 
- 1. As a first time user, I want to be able to easily navigate the site from any page
- 2. As a first time user, I want to clearly understand the target audience of the site and its intended purpose within a short timeframe
- 3. As a first time user, I want the site to be useable on any device and for it to be comfortable and responsive to use on smaller devices
- 4. As a first time user, I want to know where I can go to get further information on a specific topic or to reach out about the site itself
- 5. As a first time user, I would like to have some general information available if I'm not looking for a specific issue
+ 1. As a first time user, I want to be able to easily understand the goal of the site
+ 2. As a first time user, I want to clearly understand how to interact with the site's content
+ 3. As a first time user, I want to be able to access previous content on the site used for prior puzzles
 
 ### Returning User
 
- 1. As a returning user, I would like to be able to easily find information on specific topics relating to my specific issue
- 2. As a returning user, I would like to have a way to get in contact to request topics be covered in future
- 3. As a returning user, I would like to know about new topics that have been covered since my last visit to the site either via newsletter, social media channels or via the site itself
+ 1. As a returning user, I would like to be find new content on a daily basis
+ 2. As a returning user, I would like to have easy access to content I may have missed if I have not accessed the site for some time
 
 ## Features 
 
@@ -159,8 +156,8 @@ With the contact page, we begin with a two-column layout on larger devices, with
 
 ### Future Plans
 
-* To implement a search feature, as more content would be added to the Specifics page, allowing users to perform a search per section to cut down on time spent looking for the information they need.
-* Implementing proper handling of the Contact Page form so that users can submit their details and have it sent to a database to record any comments left or newsletter sign-ups rather than the placeholder Thank You page currently in place
+* To implement content on a continuous basis, with the current project there is a fixed number of puzzles available, with continuous content updates this would remove the current need to loop back on previously used puzzles and also reduce the code load as there would be no need for looping
+* To implement archive retention, currently when the archive is accessed the guesses are not retained locally when accessing the site, ideally each puzzle would store it's own unique values for guesses attempted allowing users to see how they performed on previous days
 
 ## Styling Choices
 
@@ -310,14 +307,15 @@ The favicon was created specifically for the site itself, with the imagery of th
    - For testing and creating the Readme banner image
 * [Coolors](https://coolors.co)
   - Used to create the color palette shown in the Readme
+* [jQuery](https://jquery.com/)
+  - Used to reload the text input field after selecting a puzzle from the Archives
 * [RealFaviconGenerator](https://realfavicongenerator.net/)
   - Used for generating the favicon set and code from the personally  created icon
 
 ## Credits
-* The dropdown menu is adapted from the Checkbox Hack guide from [CSS-Tricks](https://css-tricks.com/the-checkbox-hack/)
 * Banner images courtesy of [123rf.com](https://www.123rf.com/)
-* Logos for email clients from their respective creators(Google, Apple, Microsoft)
-* Footer Social Media Icons from [Font Awesome](https://fontawesome.com/)
-* [Mozilla Developer Network](https://developer.mozilla.org/en-US/) and [W3CSchools](https://www.w3schools.com/) for their guides on flex and grid layouts
+* Movie posters used for the daily puzzles courtesy of [MovieMania](https://www.moviemania.io/)
+* Help Overlay & Overlay Close Icons from [Font Awesome](https://fontawesome.com/)
+* [W3CSchools](https://www.w3schools.com/) for their tutorial & code on overlay creation
 
 
