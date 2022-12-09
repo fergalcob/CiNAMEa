@@ -88,6 +88,10 @@ Movie Times:
 Due Credit:  
 ![Due Credit](readme/due_credit.png)  
 
+For the font choices for the site, we have three primary options, Nixie One, Movie Times & Due Credit which can all be seen above. These choices were to keep in the theme of and to suggest the imagery of movies. With Movie Times being used for the logo title, the font itself with the film strip borders gives an clear initial idea as to what the site itself would be regarding but it was a choice to use this font sparingly due to the large filmstrip borders.
+
+Nixie One and Due Credit are then used for the main content of the page, with Due Credit evoking the text from movie poster credits and being used for the hint and answer titles. Nixie One then being used for the text content such as the hints/answers and the overlay's help text, similarly to Due Credit, this was chosen due to being a typeface similar to typewriter script as would be seen commonly in movies. 
+
 ### Favicon
 
 ![Mail Matters Favicon](readme/mail-matters-ico.png)
