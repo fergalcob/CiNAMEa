@@ -211,4 +211,40 @@ header {
     display: inline-block;
     margin: 7px;
 }
+/* Structure of the puzzle_layout section for mobile devices to allow for single column-display */
+#puzzle_layout {
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+}
+
+/* Grid positioning of image and hint sections */
+#dailyImage {
+    grid-area: 1 / 1;
+    border: solid 10px #000000;
+    line-height: 0;
+}
+
+#hintSection {
+    grid-area: 2 / 1;
+}
+
+#dailyImage img {
+    max-width: 100%;
+}
+
+#answerContent {
+    line-height: 1.5;
+}
+
+#hintSection {
+    text-align: center;
+}
+
+#hintSection li {
+    list-style: none;
+    line-height: 1.5;
+}
 
