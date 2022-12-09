@@ -77,7 +77,8 @@ function createPuzzle(overallDays) {
     image.src = answers[puzzleSelect].URL;
     image.style.width = "100%";
     image.style.clipPath = "inset(40%)";
-    image.id = "test";
+    image.id = "puzzleImage";
+    image.alt = "";
     let section = document.getElementById("dailyImage");
     section.appendChild(image);
 
