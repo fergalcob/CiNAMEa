@@ -218,7 +218,7 @@ The favicon was created specifically for the site itself, with the imagery of th
   - Used to create the color palette shown in the Readme
 * [jQuery](https://jquery.com/)
   - Used to reload the text input field after selecting a puzzle from the Archives
-* [RealFaviconGenerator](https://realfavicongenerator.net/)
+* [Favicon.io](https://favicon.io/)
   - Used for generating the favicon set and code from the personally  created icon
 
 ## Credits
