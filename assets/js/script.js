@@ -119,3 +119,44 @@ function createPuzzle(overallDays) {
     }
     answerResolution();
 }
+// Determine relevant answers for dropdown to display based on form text input
+function comparison(testVal) {
+    try {
+        comparisonTest = new RegExp(testVal, "i");
+        if (testVal === "") {
+            return [];
+        }
+        for (var i = 0; i < films[0].Name.length; i++) {
+            if (films[0].Name[i].match(comparisonTest)) {
+                tests.push(films[0].Name[i]);
+            }
+        }
+    }
+    // Alert the user if text input contains invalid characters
+    catch (e) {
+        alert("Your answer contains invalid characters");
+    }
+    return tests;
+}
+
+// Adds the answers found by comparison function to dropdown list
+function answerCheck(testVal) {
+    dropdown = document.getElementById("answers");
+    let listItem = '';
+    tests = [];
+    tests = comparison(testVal);
+    for (var i = 0; i < tests.length && i < 20; i++) {
+        listItem += '<li onclick="autoFill(this.textContent)">' + tests[i] + '</li>';
+    }
+    dropdown.innerHTML = "<ul>" + listItem + "</ul>";
+}
+function autoFill(selected) {
+    document.getElementById("answer").value = selected;
+    while (dropdown.firstChild) { dropdown.removeChild(dropdown.firstChild);}
+}
+document.getElementById("answerContent").addEventListener("keyup", function (e) {
+    if (e.target) {
+        answerCheck(e.target.value);
+    }
+}
+);
