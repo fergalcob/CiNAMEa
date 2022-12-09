@@ -1,0 +1,16 @@
+/* Custom font styling for use in index.html content */
+
+@font-face {
+    font-family: Movie-Times;
+    src: url("MovieTimes-pg61.ttf")format("truetype");
+}
+
+@font-face {
+    font-family: Due-Credit-Extra-Bold;
+    src: url("DueCredit-ExtraBold.ttf")format("truetype");
+}
+
+@font-face {
+    font-family: NixieOne;
+    src: url("NixieOne-Regular.ttf")format("truetype");
+}
