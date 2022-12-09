@@ -48,3 +48,18 @@ function getTimeRemaining() {
         return [];
     }
 }
+// Calculates which puzzle to choose from based on date
+function puzzleCalculator(overallTime, numberOfPuzzles) {
+    puzzleSelect = overallTime;
+    /*
+    Calculates the puzzle selection from currently available list.
+    Currently the project has a limited number of puzzles and so once the number of days passed has exceeded the total number of puzzles
+    the choice will loop back to the starting point.
+    Ideally, the project would be continuously updated and so this operation would no longer be necessary.
+    */
+    while (overallTime >= numberOfPuzzles) {
+        overallTime = overallTime - numberOfPuzzles;
+        puzzleSelect = overallTime;
+    }
+    return puzzleSelect;
+}
