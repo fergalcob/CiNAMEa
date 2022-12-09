@@ -92,6 +92,15 @@ Upon either guessing the answer correctly or using all six guesses incorrectly, 
 
 Once a user has completed the day's puzzle either successfully or unsuccessfully, they'll be given the option to view the archives allowing them access to all previous puzzles. By clicking on this option, the archives will be generated up until the current date and once clicked, any button will load that particular puzzle and reset the page to allow them to continue. As you can see, due to the flex nature of the buttons, we reduce the number shown per row on mobile as compared to larger devices in order to allow ease of access to the buttons.
 
+#### Daily Puzzle & Hint Section
+
+The structure of the puzzle itself is then based on the device in question, to avoid the need to reduce the image size on mobile devices, the puzzle and hint section are set to a single-column display with the hints being displayed below the image allowing the image to use the full width of the device as the puzzle progresses. When we move to higher resolution displays, this single-column display then reverts to a dual-column layout with the image taking up the left half of the page and the hints on the right.
+
+| Puzzle & Hints(Desktop) | Puzzle & Hints(Mobile) |
+| --- | --- |
+| ![Puzzle & Hints - Desktop](readme/puzzle-desktop.png)| ![Puzzle & Hints - Mobile](readme/puzzle-mobile.png)
+
+
 ### Future Plans
 
 * To implement content on a continuous basis, with the current project there is a fixed number of puzzles available, with continuous content updates this would remove the current need to loop back on previously used puzzles and also reduce the code load as there would be no need for looping
