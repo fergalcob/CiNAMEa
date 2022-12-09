@@ -101,11 +101,11 @@ The banner image uses a responsive image-set to react to the device being used t
 ## Styling Choices
 
 ### Color Palette
-![Color Palette](readme/color-palette.png)
+![Color Palette](readme/palette.png)
 
-The primary choices shift from light to dark grays as these would be commonly used when designing HTML based email. In order to provide structure to non-full width emails, the dark to light shift helps focus the reader towards the content and the color choices here aim to replicate that design with the darker grays giving way to lighter colours where the content is found.
+In keeping with other sites in the same genre, the site itself uses a very simple colour palette as the focus should be drawn to the puzzle as the main intention of the site. Using a spread of dark to light grays to keep  
 
-The red and blue shades are used in the specifics.html page to outline the information relative to their respective email clients, #DB4437 being the red used by Google in Gmail and #00A2ED being Microsoft Outlook blue.
+The red(#D30000),green(#3BB143) and grey(#666666) shades are used for the
 
 ### Typography
 
