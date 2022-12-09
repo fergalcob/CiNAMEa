@@ -110,7 +110,7 @@ When a user accesses the site for the first time in a day, the hint section will
 
 | Hint List(0 Guesses) | Hint List(3 Guesses) | Hint List(All Guesses)
 | --- | --- | --- |
-| ![Hint List - 0](readme/hint0.png) | ![Hint List - 3](readme/hints3.png) | ![Hint List - All](readme/hints6.png) |
+| ![Hint List - 0](readme/hints0.png) | ![Hint List - 3](readme/hints3.png) | ![Hint List - All](readme/hints6.png) |
 
 
 ### Future Plans
