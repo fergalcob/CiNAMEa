@@ -167,3 +167,37 @@ header {
 #answers li:hover {
     background-color: #e9e9e9;
 }
+
+/* Structuring of the archives and styling for the section & associated archive buttons */
+#archive {
+    max-width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#archives {
+    cursor: pointer;
+}
+
+.archiveButton {
+    width: 50px;
+    height: 50px;
+    background-color: #e9e9e9;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    cursor: pointer;
+
+}
+
+.archiveButton p {
+    display: table-cell;
+    margin: auto;
+    color: #000000;
+}
