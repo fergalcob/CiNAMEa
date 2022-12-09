@@ -201,3 +201,14 @@ header {
     margin: auto;
     color: #000000;
 }
+
+/* Creation and initial styling of the guess boxes */
+.answers {
+    width: 35px;
+    height: 35px;
+    background-color: #666666;
+    overflow: hidden;
+    display: inline-block;
+    margin: 7px;
+}
+
