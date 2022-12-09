@@ -233,6 +233,7 @@ header {
 
 #hintSection {
     grid-area: 2 / 1;
+    margin-top:1%;
 }
 
 #dailyImage img {
@@ -270,6 +271,7 @@ header {
 
     #hintSection {
         grid-area: 1 / 2;
+        margin-top:0;
     }
 
     /* Increase size of guess boxes beneath answer form */
