@@ -37,7 +37,7 @@
  
 ## Site Inspiration
 
-The inspiration for this site came from my current career supporting people in the Communications industry with HTML email design. Users often encounter a number of common issues when viewing these emails through certain clients however there isn't really a suitable database of what these issues can be and as such finding solutions can be a case of searching through multiple websites. The idea here was to create a centralised location for users to learn about the concepts underlying the technologies in use and also to be able to find the issues they're currently dealing with and to be provided the solutions all in one place.
+The inspiration for this site came from the recent trend of daily puzzle games beginning with [https://www.nytimes.com/games/wordle/index.html](Wordle) and continuing into more trivia based options such as [https://www.spotify.com/heardle/?](Heardle), [https://framed.wtf/](Framed) and [https://guessthe.game/] among others. These sites all follow the same general set-up of a daily, 6 guesses puzzle. CiNAMEa takes from these and creates a daily puzzle wherein the user is shown a portion of a movie poster with the title removed and based on their guesses are shown additional portions of the image or are provided hints to the film's identity.
 
 ## User Stories
 
