@@ -13,12 +13,6 @@
    * [Index.html Features](#index.html-features)
      1. [Banner Image](#banner-image)
      2. [Site Aims](#site-aims)
-   * [Basics.html Features](#basics.html-features)
-     1. [Page Layout](#page-layout)
-   * [Specifics.html Features](#specifics.html-features)
-     1. [Client Specific Information](#client-specific-information)
-   * [Contact.html Features](#contact.html-features)
-     1. [Contact Form](#contact-form)
    * [Future Plans](#future-plans)
 - [Styling Choices](#styling-choices)
    * [Color Palette](#color-palette)
@@ -98,63 +92,6 @@ The banner image uses a responsive image-set to react to the device being used t
 | --- | --- |
 | ![Mobile Banner](readme/banner-mobile.png) | ![Tablet Banner](readme/banner-tablet.png) |
 
-#### Site Aims
-
-The Site Aims sections utilises a 3-column layout on laptop/desktop while switching to a 1-column on mobile devices allowing for easy readability on any device, these Aims are separated by a vertical divider in the 3-column layout switching to a horizontal in the 1-column view. The intent of this section as one of the initial items a first-time user of the site will see is to give users a very brief overview of the goals of the site itself with each goal corresponding to one of the sub-pages of the site.
-
-| 3-Column Laptop/Desktop Layout Of Site Aims |
-| --- |
-| ![Laptop/Desktop Site Aims](readme/3-column-laptop.png)
-
-| Single Column Mobile Layout Of Site Aims |
-| --- |
-| ![Mobile Site Aims](readme/1-column-intro-mobile.png) |
-
-### Basics.html Features
-
-#### Page Layout
-
-The aim of the Basics page is to give a new user a clear indication of the target audience for the site, both for new and returning users, the clear imagery of the email client icons being easily recognizable and with the code snippets within the "HTML and Email" being targeted towards users who would interact with both HTML and email on a regular basis.
-
-With this page, the content of the page simply shifts with the device being used, retaining a single column layout across mobile and larger devices, with the font-sizing changing appropriately across devices.
-
-| Laptop/Desktop Layout Of Intro To Email |
-| --- |
-| ![Laptop/Desktop Layout Of Intro To Email](readme/basics-intro-laptop.png) |
-
-| Mobile Layout Of Intro To Email |
-| --- |
-| ![Mobile Layout Of Intro To Email](readme/basics-intro-mobile.png) |
-
-### Specifics.html Features
-
-#### Client Specific Information
-
-So the Specifics page is intended to be a repository of the issues that users can run into on a day to day basis. As such this is intended to grow over time as more issues and solutions are added. Because of this, the information is added within a clickable &lt;Details&gt; tag which allows users to expand the information that they want while the rest remains hidden. Having the full information be hidden allows the page to grow while not overloading the user with unnecessary information. When switching to a mobile device, this becomes a single-column layout for the information to be clearly readable without overly shrinking the two-column layout.
- 
-In addition to this, the content of each section is color-coded to the client the information is intended for, with the Google red for the Gmail issues and the Outlook blue for the Outlook issues.
-
-| Laptop/Desktop Layout Of Client Information |
-| --- |
-| ![Laptop/Desktop Clients Layout](readme/specifics-layout-laptop.png) |
-
-| Mobile Layout Of Client Information Closed | Mobile Layout Of Client Information Open |
-| --- | --- |
-| ![Mobile Client Layout Closed](readme/specifics-mobile-body.png) | ![Mobile Client Layout Open](readme/specifics-mobile-expanded.png) |
-
-### Contact.html Features
-
-#### Contact Form
-
-With the contact page, we begin with a two-column layout on larger devices, with the information on what are the benefits to the user of signing up or leaving a comment on the site being displayed on the left hand-side of the page, with the right-side being used for the form itself. With the current implementation, this form allows users to both leave a comment and also has an opt-in checkbox for users to consider receiving a newsletter in future if they so choose. Currently, this form only leads to a generic Thank You page if the required details(First Name, Last Name, Email Address) are submitted but this could be updated in future to handle these details and add them to a database for further use such as signing-in.
-
-| Laptop/Desktop Layout Of Contact Form |
-| --- |
-| ![Laptop/Desktop Layout](readme/contact-form-laptop.png) |
-
-| Mobile Layout Of Contact Form |
-| --- |
-| ![Mobile Layout](readme/contact-form-mobile.png) |
 
 ### Future Plans
 
