@@ -160,3 +160,10 @@ document.getElementById("answerContent").addEventListener("keyup", function (e) 
     }
 }
 );
+
+// Add hint to hint section if guess is incorrect
+function addHints(newHint) {
+    let hints = hintList.appendChild(document.createElement('li'));
+    var hintItems = ["Year of Release", "Genre", "Director", "Runtime", "Rotten Tomatoes Score"];
+    hints.innerHTML = "<span class=\"hintTitle\">" + hintItems[newHint] + ": </span>" + answers[puzzleSelect][hintItems[newHint]];
+}
