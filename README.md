@@ -84,6 +84,13 @@ Upon entering any text in the answer field, the user will be presented with a li
 
 Upon either guessing the answer correctly or using all six guesses incorrectly, the answer submission field will then be replaced by the results content which will let users know if they have guessed successfully or unsuccessfully. This also includes a countdown timer to let them know when the next puzzle will be available to answer.
 
+#### Archive Buttons
+
+| Archive Buttons(Desktop) | Archive Buttons(Mobile) |
+| --- | --- |
+| ![Archive Buttons - Desktop](readme/archive-desktop.png)| ![Archive Buttons - Mobile](readme/archive-mobile.png)
+
+Once a user has completed the day's puzzle either successfully or unsuccessfully, they'll be given the option to view the archives allowing them access to all previous puzzles. By clicking on this option, the archives will be generated up until the current date and once clicked, any button will load that particular puzzle and reset the page to allow them to continue. As you can see, due to the flex nature of the buttons, we reduce the number shown per row on mobile as compared to larger devices in order to allow ease of access to the buttons.
 
 ### Future Plans
 
