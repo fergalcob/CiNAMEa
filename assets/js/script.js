@@ -272,12 +272,12 @@ document.addEventListener("keypress", function (event) {
     }
 });
 
-// Activates help overlay on click of help icon
+// Activates help overlay on click of help icon as per https://www.w3schools.com/howto/howto_css_overlay.asp
 function on() {
     document.getElementById("overlay").style.display = "block";
 }
 
-// Disable help overlay on click of x icon within help window
+// Disable help overlay on click of x icon within help window as per https://www.w3schools.com/howto/howto_css_overlay.asp
 function off() {
     document.getElementById("overlay").style.display = "none";
 }
