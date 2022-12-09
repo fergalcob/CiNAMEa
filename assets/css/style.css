@@ -284,3 +284,11 @@ header {
         width: 30%;
     }
 }
+@media screen and (min-width:1050px) {
+    #answerContent{
+        font-size:1.4em;
+    }
+    #hintSection{
+        font-size:1.5em;
+    }
+}
