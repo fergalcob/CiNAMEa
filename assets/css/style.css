@@ -35,7 +35,7 @@ header {
     height: auto;
     border-bottom: 10px solid #000;
     border-top: 10px solid #000;
-    border-image: url("filmstrip.webp") 20 round;
+    border-image: url("../images/filmstrip.webp") 20 round;
     padding: 5px;
     margin-top: 10px;
     display: flex;
