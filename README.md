@@ -60,9 +60,9 @@ The banner image uses a responsive image-set to react to the device being used t
 | --- |
 | ![Desktop Banner](readme/desktop-banner.png) |
 
-| Mobile Banner | 
-| --- | --- |
-| ![Mobile Banner](readme/mobile-banner.png) | 
+| Mobile Banner |
+| --- |
+| ![Mobile Banner](readme/mobile-banner.png) |
 
 #### Answer Field & Answer Results
 
