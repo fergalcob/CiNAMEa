@@ -60,9 +60,9 @@ What we have in the banner for the site includes the CiNAMEa title which we disc
 | --- |
 | ![Desktop Banner](readme/desktop-banner.png) |
 
-| Laptop/Desktop Banner |
+| Mobile Banner |
 | --- |
-| ![Desktop Banner](readme/desktop-banner.png) |
+| ![Mobile Banner](readme/mobile-banner.png) |
 
 
 ### Future Plans
