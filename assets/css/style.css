@@ -2,17 +2,17 @@
 
 @font-face {
     font-family: Movie-Times;
-    src: url("MovieTimes-pg61.ttf")format("truetype");
+    src: url("assets/fonts/MovieTimes-pg61.ttf")format("truetype");
 }
 
 @font-face {
     font-family: Due-Credit-Extra-Bold;
-    src: url("DueCredit-ExtraBold.ttf")format("truetype");
+    src: url("assets/fonts/DueCredit-ExtraBold.ttf")format("truetype");
 }
 
 @font-face {
     font-family: NixieOne;
-    src: url("NixieOne-Regular.ttf")format("truetype");
+    src: url("assets/fonts/NixieOne-Regular.ttf")format("truetype");
 }
 
 /* Basic page styling */
