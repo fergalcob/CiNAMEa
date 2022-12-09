@@ -52,17 +52,17 @@ The inspiration for this site came from the recent trend of daily puzzle games b
 
 ### Index.html features
 
-#### Banner Image
+#### Header Section
 
-The banner image uses a responsive image-set to react to the device being used to access the site, such as mobile device for mobiles, a tablet for tablets etc. as you can see in the images below. This is both to represent how the site is being accessed at the time, but also to visualize how people interact with emails in these current times and that all types of devices would be important to support in terms of responsiveness.
+What we have in the banner for the site includes the CiNAMEa title which we discuss the intentions regarding in the typography section. We also have our help icon located in the header which allows users easy access to the help overlay should they need any guidance as to how to interact with the site on their initial visit. Finally, this section is bordered above and below by a filmstrip-like image incorporating the theme and focus of the site. 
 
 | Laptop/Desktop Banner |
 | --- |
-| ![Laptop Banner](readme/banner-laptop.png) |
+| ![Desktop Banner](readme/desktop-banner.png) |
 
-| Mobile Banner | Tablet Banner |
+| Mobile Banner | 
 | --- | --- |
-| ![Mobile Banner](readme/banner-mobile.png) | ![Tablet Banner](readme/banner-tablet.png) |
+| ![Mobile Banner](readme/mobile-banner.png) | 
 
 
 ### Future Plans
