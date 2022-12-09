@@ -52,17 +52,32 @@ The inspiration for this site came from the recent trend of daily puzzle games b
 
 ### Index.html features
 
-#### Header Section
+#### Banner Image
 
-What we have in the banner for the site includes the CiNAMEa title which we discuss the intentions regarding in the typography section. We also have our help icon located in the header which allows users easy access to the help overlay should they need any guidance as to how to interact with the site on their initial visit. Finally, this section is bordered above and below by a filmstrip-like image incorporating the theme and focus of the site. 
+The banner image uses a responsive image-set to react to the device being used to access the site, such as mobile device for mobiles, a tablet for tablets etc. as you can see in the images below. This is both to represent how the site is being accessed at the time, but also to visualize how people interact with emails in these current times and that all types of devices would be important to support in terms of responsiveness.
 
 | Laptop/Desktop Banner |
 | --- |
 | ![Desktop Banner](readme/desktop-banner.png) |
 
-| Mobile Banner |
-| --- |
-| ![Mobile Banner](readme/mobile-banner.png) |
+| Mobile Banner | 
+| --- | --- |
+| ![Mobile Banner](readme/mobile-banner.png) | 
+
+#### Answer Field & Answer Results
+
+![Answer Field](readme/form-field.png)
+
+The first thing a user will see after the banner is the text submission field where they can provide the answer to the current puzzle. The field's initial placeholder text is used to provide that information quickly and easily to a new user with the help option being available if they need any other guidance.
+Below this field are the six boxes used to show the status of the day's puzzle which will change colour as the user uses up their daily guess count.
+
+![Suggestion List](readme/suggestions.png)
+
+Upon entering any text in the answer field, the user will be presented with a list of titles that match the input they have provided thus far, with additional text narrowing down their choices available. Users can select from this list to autopopulate the answer field or can continue to type their answer freely with the answer check being case insensitive.
+
+![Answer Results](readme/results.png)
+
+Upon either guessing the answer correctly or using all six guesses incorrectly, the answer submission field will then be replaced by the results content which will let users know if they have guessed successfully or unsuccessfully. This also includes a countdown timer to let them know when the next puzzle will be available to answer.
 
 
 ### Future Plans
