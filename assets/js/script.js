@@ -199,3 +199,51 @@ function retrievePuzzle() {
     let archiveRetrieve = this.value;
     createPuzzle(archiveRetrieve);
 }
+// Replaces answer submission on correct answer/6 incorrect guesses and starts countdown to next puzzle
+function answerResolution() {
+    if (localStorage.getItem("Answered") === "Correct") {
+        answerContent.innerHTML = "<h2>You Got It!</h2>" + "<span class=\"answerTitle\">The answer was:</span> " + answers[puzzleSelect].Name + "</p><span class=\"answerTitle\">Next puzzle in:</span> " + "<span id=\"countdown\"></span>" + "<p>View the <span id=\"archives\">Archives</span>";
+        window.setTimeout(getTimeRemaining, 0);
+        timerID = window.setInterval(getTimeRemaining, 1000);
+        document.getElementById("archives").addEventListener("click", function () {archive();});
+    }
+    else if (localStorage.getItem("Answered") === "Incorrect" && guesses === 6) {
+        image.style.clipPath = "inset\(0\)";
+        answerContent.innerHTML = "<h2>Unlucky</h2>" + "<p><span class=\"answerTitle\">The answer was:</span> " + answers[puzzleSelect].Name + "</p><span class=\"answerTitle\">Next puzzle in:</span> " + "<span id=\"countdown\"></span>" + "<p>View the <span id=\"archives\">Archives</span>";
+        window.setTimeout(getTimeRemaining, 0);
+        timerID = window.setInterval(getTimeRemaining, 1000);
+        document.getElementById("archives").addEventListener("click", function () { archive();});
+    }
+    else {
+        return [];
+    }
+}
+
+// Determine if answer submitted is correct
+function guessingGame() {
+    let question = document.getElementById("answer").value;
+    let checkAnswer = answers[puzzleSelect].Name;
+    var testAnswer = checkAnswer.localeCompare(question, undefined, { sensitivity: "accent" });
+    if (testAnswer === 0) {
+        dropdown.innerHTML = "<p>You got it!</p>";
+        image.style.clipPath = "inset\(0\)";
+        guessResults[guesses].style.backgroundColor = "#3BB143";
+        localStorage.setItem("guesses", guesses);
+        localStorage.setItem("Answered", "Correct");
+        answerResolution();
+    }
+    else {
+        if (guesses < 5) {
+            addHints(guesses);
+        }
+        guessResults[guesses].style.backgroundColor = "#D30000";
+        guesses++;
+        // Change styling of puzzle image to increase dimensions based on incorrect answer
+        let test = image.style.clipPath;
+        let answer = (test.replace("%\)", "").replace("inset\(", "")) / ((0.25 * guesses) + 0.75);
+        image.style.clipPath = "inset\(" + answer + "%\)";
+        localStorage.setItem("guesses", guesses);
+        localStorage.setItem("Answered", "Incorrect");
+        answerResolution();
+    }
+}
