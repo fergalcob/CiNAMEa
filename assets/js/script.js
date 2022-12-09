@@ -63,3 +63,59 @@ function puzzleCalculator(overallTime, numberOfPuzzles) {
     }
     return puzzleSelect;
 }
+var timeDifference = timeCalculation(initialDate, currentDate);
+
+// On page load, puzzle is calculated and guesses are initialized 
+window.onload = createPuzzle(timeDifference);
+
+// Chooses puzzle and adds the correct image
+function createPuzzle(overallDays) {
+    var puzzleSelect = puzzleCalculator(overallDays, answers.length);
+    while (puzzleImage.firstChild) { puzzleImage.removeChild(puzzleImage.firstChild); }
+    // Create and set styling for puzzle image
+    image = document.createElement("img");
+    image.src = answers[puzzleSelect].URL;
+    image.style.width = "100%";
+    image.style.clipPath = "inset(40%)";
+    image.id = "test";
+    let section = document.getElementById("dailyImage");
+    section.appendChild(image);
+
+    // Set guesses and if already answered, retrieve guesses for todays puzzle
+    if (isNaN(localStorage.getItem("days"))) {
+        localStorage.setItem("days", "0");
+
+    }
+    else if ((Number(localStorage.getItem("days")) > overallDays) || (Number(localStorage.getItem("days")) < overallDays)) {
+        localStorage.setItem("days", overallDays);
+        localStorage.setItem("guesses", "0");
+        localStorage.setItem("Answered", "Unanswered");
+    }
+    else if ((Number(localStorage.getItem("days")) < overallDays)) {
+        localStorage.setItem("days", overallDays);
+        localStorage.setItem("guesses", "0");
+        localStorage.setItem("Answered", "Unanswered");
+    }
+    guesses = Number(localStorage.getItem("guesses"));
+
+    // For previously answered puzzle, retrieve and set styling for guesses & image reveal
+    for (var i = 0; i <= guesses; i++) {
+        if (guesses === 0) {
+            for (var count = 0; count < 6; count++) {
+                guessResults[count].style.backgroundColor = "#666666";
+            }
+        }
+        else if (guesses != 0 && i < guesses) {
+            let test = image.style.clipPath;
+            test = (test.replace("%\)", "").replace("inset\(", "")) / ((0.25 * guesses) + 0.75);
+            image.style.clipPath = "inset\(" + test + "%\)";
+            guessResults[i].style.backgroundColor = "#D30000";
+            if (i < 5) { addHints(i); }
+        }
+        else if (i === guesses && localStorage.getItem("Answered") === "Correct") {
+            guessResults[i].style.backgroundColor = "#3BB143";
+            image.style.clipPath = "inset\(0\)";
+        }
+    }
+    answerResolution();
+}
