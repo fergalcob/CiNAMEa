@@ -16,8 +16,29 @@
         <i id="help" class="fa-regular fa-circle-question" onclick="on()"></i>
     </header>
     <main>
+        <div id="puzzle_body">
+            <!-- Button that opens help menu -->
+            <div id="overlay">
+                <div id="instructions">
+                    <h2>Instructions <i class="fa-regular fa-circle-xmark" onclick="off()"></i></h2><br>
+                    <p>CiNAMEa is a daily movie guessing game, each day you'll be shown a portion of a movie poster
+                        without the name included in the image.</p><br>
+                    <p>You have 6 guesses to figure out the name of the day's movie and each incorrect guess will reveal
+                        an additional hint and more of the image.</p>
+                </div> <!-- End of instructions -->
+            </div> <!-- End of overlay -->
 
+            <div id="answerContent">
+                <!-- Form input for answer submission -->
+                <form id="test" autocomplete="off">
+                    <input type="text" name="answer" id="answer" value="" placeholder="Enter your Movie guess here" />
+                    <input type="button" id="submitAnswer" onclick="guessingGame()" value="Submit">
+                </form>
+                <!-- Container for autocomplete dropdown menu -->
+                <div id="answers"></div>
+            </div> <!-- End of answerContent -->
     </main>
+    <script src="https://kit.fontawesome.com/e387853ef7.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
