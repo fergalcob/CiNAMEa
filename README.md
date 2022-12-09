@@ -81,12 +81,12 @@ The red(#D30000),green(#3BB143) and grey(#666666) shades are used for the guess 
 
 ### Typography
 
-Nixie One:
-![Nixie One](readme/nixie_one.png)
-Movie Times:
-![Movie Times](readme/movie_times.png)
-Due Credit:
-![Due Credit](readme/due_credit.png)
+Nixie One:  
+![Nixie One](readme/nixie_one.png)  
+Movie Times:  
+![Movie Times](readme/movie_times.png)  
+Due Credit:  
+![Due Credit](readme/due_credit.png)  
 
 ### Favicon
 
