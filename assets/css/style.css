@@ -52,3 +52,22 @@ header {
 #puzzleBody {
     margin-top: 10px;
 }
+
+/* Font styling for page */
+.hintTitle {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#answerContent h2,
+.answerTitle {
+    font-size: 1.75em;
+}
+
+#hintSection h2,
+#answerContent h2,
+.hintTitle,
+.answerTitle {
+    font-family: Due-Credit-Extra-Bold;
+    font-weight: 200;
+}
