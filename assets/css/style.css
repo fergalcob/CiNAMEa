@@ -204,13 +204,17 @@ header {
 
 /* Creation and initial styling of the guess boxes */
 .answers {
-    width: 35px;
-    height: 35px;
+    width: 9%;
     background-color: #666666;
     overflow: hidden;
     display: inline-block;
     margin: 7px;
 }
+.answers:after {
+    content: "";
+    display:inline-block;
+    padding-bottom: 100%;
+  }
 /* Structure of the puzzle_layout section for mobile devices to allow for single column-display */
 #puzzle_layout {
     margin: 10px auto;
@@ -270,8 +274,7 @@ header {
 
     /* Increase size of guess boxes beneath answer form */
     .answers {
-        width: 50px;
-        height: 50px;
+        width: 4%;
     }
 
     /* Decrease size of help window to reduce screenspace usage */
