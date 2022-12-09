@@ -50,34 +50,6 @@ The inspiration for this site came from the recent trend of daily puzzle games b
 
 ## Features 
 
-### Common Features
-
-#### Navbar
-
-The navbar is found across all pages on the site, giving easy access to all pages with its fixed positioning allowing the page links to be accessible at all times regardless of where the user has scrolled to within the currently open page. Within the navbar, we also have the site name which also acts as a clickable link to return the user to the home page at any time. The page links also include a hover functionality when used on laptop/desktops to indicate the currently highlighted link.
-
-| Laptop/Desktop Banner |
-| --- |
-| ![Desktop Navbar](readme/navbar-desktop.png) |
-
-When accessed via mobile, this navbar switches to a dropdown menu to allow for all content to be accessible at any time without taking over the screen space of the page itself. The menu itself is accessed through the hamburger icon which creates for non-obtrusive access to allow for the logo to be retained at the same sizing.
-
-| Mobile Navbar Closed | Mobile Navbar Open |
-| --- | --- |
-| ![Closed Mobile Navbar](readme/navbar-mobile.png) | ![Opened Mobile Navbar](readme/navbar-mobile-extended.png) |
-
-#### Footer
-
-The footer uses a grid-design across all pages to link to the relevant social media pages for the site, with each icon being instantly recognizable to the user and in future the placeholder links could allow for the user to follow the site for updates through the relevant links.
-
-| Laptop/Desktop Footer |
-| --- |
-| ![Desktop Footer](readme/footer-laptop.png) |
-
-| Mobile Footer |
-| --- |
-| ![Mobile Footer](readme/footer-mobile.png) |
-
 ### Index.html features
 
 #### Banner Image
@@ -103,13 +75,15 @@ The banner image uses a responsive image-set to react to the device being used t
 ### Color Palette
 ![Color Palette](readme/palette.png)
 
-In keeping with other sites in the same genre, the site itself uses a very simple colour palette as the focus should be drawn to the puzzle as the main intention of the site. Using a spread of dark to light grays to keep  
+In keeping with other sites in the same genre, the site itself uses a very simple and focused colour palette as the eye should be drawn to the puzzle as the main intention of the site. Using a spread of dark to light grays to keep a general theme in place without any contrast issues
 
-The red(#D30000),green(#3BB143) and grey(#666666) shades are used for the
+The red(#D30000),green(#3BB143) and grey(#666666) shades are used for the guess boxes to denote unused/incorrect and correct guesses, these choices are due to their ease of understanding by users from their common usage with the red for incorrect, green for correct and grey for unanswered.
 
 ### Typography
 
-Similar to the color palette choices, the font choices are a number of fonts commonly used in HTML emails, as email clients may not respect the styling necessary to import a font-family via URL and also in some cases, users may not be able to guarantee that their audience would have a local copy of a font available, the use of web-safe fonts is a necessity. For this site, I've used two of those web-safe fonts, Verdana and Trebuchet MS due to their reach across operating systems.
+![Nixie One](readme/nixie_one.png)
+![Movie Times](readme/movie_times.png)
+![Due Credit](readme/due_credit.png)
 
 ### Favicon
 
