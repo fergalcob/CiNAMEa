@@ -14,3 +14,41 @@
     font-family: NixieOne;
     src: url("NixieOne-Regular.ttf")format("truetype");
 }
+
+/* Basic page styling */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: #333333;
+    width: 100%;
+    color: #ffffff;
+    font-family: NixieOne;
+    font-size: 1.25em;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    border-bottom: 10px solid #000;
+    border-top: 10px solid #000;
+    border-image: url("filmstrip.webp") 20 round;
+    padding: 5px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#puzzle_body,
+header {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+#puzzleBody {
+    margin-top: 10px;
+}
