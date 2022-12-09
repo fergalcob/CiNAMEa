@@ -65,17 +65,22 @@ The banner image uses a responsive image-set to react to the device being used t
 | ![Mobile Banner](readme/mobile-banner.png) |
 
 #### Answer Field & Answer Results
-
-![Answer Field](readme/form-field.png)
+| Answer Submission Field |
+| --- |
+| ![Answer Field](readme/form-field.png) |
 
 The first thing a user will see after the banner is the text submission field where they can provide the answer to the current puzzle. The field's initial placeholder text is used to provide that information quickly and easily to a new user with the help option being available if they need any other guidance.
 Below this field are the six boxes used to show the status of the day's puzzle which will change colour as the user uses up their daily guess count.
 
-![Suggestion List](readme/suggestions.png)
+| Suggestion Dropdown |
+| --- |
+| ![Suggestion List](readme/suggestions.png) |
 
 Upon entering any text in the answer field, the user will be presented with a list of titles that match the input they have provided thus far, with additional text narrowing down their choices available. Users can select from this list to autopopulate the answer field or can continue to type their answer freely with the answer check being case insensitive.
 
-![Answer Results](readme/results.png)
+| Results Content |
+| --- |
+| ![Answer Results](readme/results.png)|
 
 Upon either guessing the answer correctly or using all six guesses incorrectly, the answer submission field will then be replaced by the results content which will let users know if they have guessed successfully or unsuccessfully. This also includes a countdown timer to let them know when the next puzzle will be available to answer.
 
