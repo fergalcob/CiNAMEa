@@ -141,9 +141,9 @@ Nixie One and Due Credit are then used for the main content of the page, with Du
 
 ### Favicon
 
-![Mail Matters Favicon](readme/mail-matters-ico.png)
+![CiNAMEa Favicon](readme/cinamea-icon.png)
 
-The favicon was created specifically for the site itself, with the imagery of the two Ms, one overlaid upon the other representing the site name "Mail Matters" while also being evocative of an envelope to bring it together with the email focused nature of the site itself.
+The favicon was personally created the site, reusing the filmstrip imagery from the banner border enclosing a question mark symbol to represent the two primary aspects of the site, movies and puzzles.
 
 ## Device Testing Results & Known Issues
 
