@@ -247,3 +247,20 @@ function guessingGame() {
         answerResolution();
     }
 }
+// Activates help overlay on click of help icon
+function on() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+// Disable help overlay on click of x icon within help window
+function off() {
+    document.getElementById("overlay").style.display = "none";
+}
+
+// Waits for enter press within text input to prevent page refresh and activate submit button in place of it
+document.addEventListener("keypress", function (event) {
+    if (event.key === "Enter" && event.target.closest("#answer")) {
+        event.preventDefault();
+        document.getElementById("submitAnswer").click();
+    }
+});
