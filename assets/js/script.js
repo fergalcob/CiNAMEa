@@ -167,3 +167,35 @@ function addHints(newHint) {
     var hintItems = ["Year of Release", "Genre", "Director", "Runtime", "Rotten Tomatoes Score"];
     hints.innerHTML = "<span class=\"hintTitle\">" + hintItems[newHint] + ": </span>" + answers[puzzleSelect][hintItems[newHint]];
 }
+
+// On click to view the archive, create the archive buttons for the puzzles until this point
+function archive() {
+    let archiveSection = document.getElementById("archive");
+    for (var i = 0; i < timeDifference; i++) {
+        let archiveItem = document.createElement("button");
+        archiveItem.setAttribute('class', "archiveButton");
+        archiveItem.setAttribute('value', i);
+        archiveItem.innerHTML = "<p>" + (i + 1) + "</p>";
+        archiveSection.appendChild(archiveItem);
+    }
+    var btn = document.getElementsByClassName("archiveButton");
+    for (i = 0; i < btn.length; i++) {
+        btn[i].addEventListener("click", function () {
+            // Reloads the text input form after button is clicked to retrieve previous puzzle
+            $("#answerContent").load(location.href + " #answerContent");
+            // Stop countdown timer function from running when answerContent div is reloaded
+            window.clearInterval(timerID);
+            createPuzzle(this.value);
+            // Remove hints and archive buttons for the currently answered puzzle
+            var hintRemoval = document.getElementById("hints");
+            while (hintRemoval.firstChild) { hintRemoval.removeChild(hintRemoval.firstChild);}
+            while (archiveSection.firstChild) { archiveSection.removeChild(archiveSection.firstChild);}
+        });
+    }
+}
+
+// Retrieves previous puzzle after click on archive button
+function retrievePuzzle() {
+    let archiveRetrieve = this.value;
+    createPuzzle(archiveRetrieve);
+}
