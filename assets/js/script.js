@@ -248,6 +248,30 @@ function guessingGame() {
         answerResolution();
     }
 }
+
+// Waits for enter press within text input to prevent page refresh and activate submit button in place of it
+document.addEventListener("keypress", function (event) {
+    if (event.key === "Enter" && event.target.closest("#answer")) {
+        event.preventDefault();
+        document.getElementById("submitAnswer").click();
+    }
+});
+
+// Waits for enter press on help button to open via keyboard controls
+document.addEventListener("keypress", function (event) {
+    if (event.key === "Enter" && event.target.closest("#help")) {
+        event.preventDefault();
+        document.getElementById("help").click();
+    }
+});
+// Waits for enter press on exit button to open via keyboard controls and close overlay
+document.addEventListener("keypress", function (event) {
+    if (event.key === "Enter" && event.target.closest("#closeOverlay")) {
+        event.preventDefault();
+        document.getElementById("closeOverlay").click();
+    }
+});
+
 // Activates help overlay on click of help icon
 function on() {
     document.getElementById("overlay").style.display = "block";
@@ -258,10 +282,3 @@ function off() {
     document.getElementById("overlay").style.display = "none";
 }
 
-// Waits for enter press within text input to prevent page refresh and activate submit button in place of it
-document.addEventListener("keypress", function (event) {
-    if (event.key === "Enter" && event.target.closest("#answer")) {
-        event.preventDefault();
-        document.getElementById("submitAnswer").click();
-    }
-});
