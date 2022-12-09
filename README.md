@@ -1,6 +1,6 @@
 ![Banner Image](readme/responsive.png)
 ## Live Link
-[https://fergalcob.github.io/Mail-Matters/](https://fergalcob.github.io/Mail-Matters/)
+[https://fergalcob.github.io/CiNAMEa/](https://fergalcob.github.io/CiNAMEa/)
 
 ## Table of Contents
  - [Site Inspiration](#site-inspiration)
@@ -37,7 +37,7 @@
  
 ## Site Inspiration
 
-The inspiration for this site came from the recent trend of daily puzzle games beginning with [https://www.nytimes.com/games/wordle/index.html](Wordle) and continuing into more trivia based options such as [https://www.spotify.com/heardle/?](Heardle), [https://framed.wtf/](Framed) and [https://guessthe.game/] among others. These sites all follow the same general set-up of a daily, 6 guesses puzzle. CiNAMEa takes from these and creates a daily puzzle wherein the user is shown a portion of a movie poster with the title removed and based on their guesses are shown additional portions of the image or are provided hints to the film's identity.
+The inspiration for this site came from the recent trend of daily puzzle games beginning with [Wordle](https://www.nytimes.com/games/wordle/index.html) and continuing into more trivia based options such as (Heardle](https://www.spotify.com/heardle/?), [Framed](https://framed.wtf/) and [GuessThe.Game](https://guessthe.game/) among others. These sites all follow the same general set-up of a daily, 6 guesses puzzle. CiNAMEa takes from these and creates a daily puzzle wherein the user is shown a portion of a movie poster with the title removed and based on their guesses are shown additional portions of the image or are provided hints to the film's identity.
 
 ## User Stories
 
