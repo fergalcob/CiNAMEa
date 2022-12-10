@@ -221,7 +221,7 @@ function answerResolution() {
     }
     else if (localStorage.getItem("Answered") === "Incorrect" && guesses === 6) {
         image.style.clipPath = "inset\(0\)";
-        answerContent.innerHTML = "<h2>Unlucky</h2>" + "<p><span class=\"answerTitle\">The answer was:</span> " + answers[puzzleSelect].Name + "</p><span class=\"answerTitle\">Next puzzle in:</span> " + "<span id=\"countdown\"></span>" + "<p><span id=\"archives\">View the Archives</span>";
+        answerContent.innerHTML = "<h2>Unlucky</h2>" + "<p><span class=\"answerTitle\">The answer was:</span> " + answers[puzzleSelect].Name + "</p><span class=\"answerTitle\">Next puzzle in:</span> " + "<span id=\"countdown\"></span>" + "<p><span id=\"archives\" tabindex=\"0\">View the Archives</span>";
         window.setTimeout(getTimeRemaining, 0);
         timerID = window.setInterval(getTimeRemaining, 1000);
         document.getElementById("archives").addEventListener("click", function () { archive();});
@@ -278,12 +278,15 @@ document.addEventListener("keypress", function (event) {
         event.preventDefault();
         document.getElementById("help").click();
     }
-});
-// Waits for enter press on exit button to open via keyboard controls and close overlay
-document.addEventListener("keypress", function (event) {
-    if (event.key === "Enter" && event.target.closest("#closeOverlay")) {
+    // Waits for enter press on exit button to open via keyboard controls and close overlay
+    else if (event.key === "Enter" && event.target.closest("#closeOverlay")) {
         event.preventDefault();
         document.getElementById("closeOverlay").click();
+    }
+     // Waits for enter press on archive button to open via keyboard controls to create archive list
+    else if (event.key === "Enter" && event.target.closest("#archives")) {
+        event.preventDefault();
+        document.getElementById("archives").click();
     }
 });
 
