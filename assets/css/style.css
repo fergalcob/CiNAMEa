@@ -150,9 +150,9 @@ header {
 }
 
 #answers ul {
-    height: 150px;
-    overflow: scroll;
-    width: 210px;
+    max-height: 150px;
+    overflow-y: scroll;
+    max-width: 210px;
 }
 
 #answers li {
