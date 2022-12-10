@@ -234,9 +234,9 @@ function answerResolution() {
 
 // Determine if answer submitted is correct
 function guessingGame() {
-    let question = document.getElementById("answer").value;
+    let answerSubmission = document.getElementById("answer");
     let checkAnswer = answers[puzzleSelect].Name;
-    var testAnswer = checkAnswer.localeCompare(question, undefined, { sensitivity: "accent" });
+    var testAnswer = checkAnswer.localeCompare(answerSubmission.value, undefined, { sensitivity: "accent" });
     if (testAnswer === 0) {
         dropdown.innerHTML = "<p>You got it!</p>";
         image.style.clipPath = "inset\(0\)";
@@ -251,6 +251,9 @@ function guessingGame() {
         }
         guessResults[guesses].style.backgroundColor = "#D30000";
         guesses++;
+        // Reset text input field on submission of guess
+        answerSubmission.value="";
+        answerCheck(answerSubmission.value);
         // Change styling of puzzle image to increase dimensions based on incorrect answer
         let test = image.style.clipPath;
         let answer = (test.replace("%\)", "").replace("inset\(", "")) / ((0.25 * guesses) + 0.75);
