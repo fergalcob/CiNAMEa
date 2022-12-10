@@ -15,6 +15,7 @@ let puzzleSelect;
 let archiveEnabled;
 let archiveRetrieve;
 
+// Set start and current times to midnight so that days passed return integer values when calculating days elapsed
 initialDate.setHours(0, 0, 0, 0);
 currentDate.setHours(0, 0, 0, 0);
 
@@ -31,22 +32,24 @@ function getTimeRemaining() {
     var beginningCountdown = new Date();
     var countdown = document.getElementById("countdown");
     while (Date.parse(midnightTonight) != Date.parse(beginningCountdown)) {
-        let total = Date.parse(midnightTonight) - Date.parse(beginningCountdown);
-        let seconds = Math.floor((total / 1000) % 60);
-        let minutes = Math.floor((total / 1000 / 60) % 60);
-        let hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-        if (hours < 10 || minutes < 10 || seconds < 10) {
-            if (hours < 10) {
-                hours = '0' + hours;
+        // Calculate the time remaining until midnight
+        let totalTimeRemaining = Date.parse(midnightTonight) - Date.parse(beginningCountdown);
+        let secondsRemaining = Math.floor((totalTimeRemaining / 1000) % 60);
+        let minutesRemaining = Math.floor((totalTimeRemaining / 1000 / 60) % 60);
+        let hoursRemaining = Math.floor((totalTimeRemaining / (1000 * 60 * 60)) % 24);
+        // Adds leading zero to countdown if less than 10 units remaining
+        if (hoursRemaining < 10 || minutes < 10 || seconds < 10) {
+            if (hoursRemaining < 10) {
+                hoursRemaining = '0' + hoursRemaining;
             }
-            if (minutes < 10) {
-                minutes = '0' + minutes;
+            if (minutesRemaining < 10) {
+                minutesRemaining = '0' + minutesRemaining;
             }
-            if (seconds < 10) {
-                seconds = '0' + seconds;
+            if (secondsRemaining < 10) {
+                secondsRemaining = '0' + secondsRemaining;
             }
         }
-        countdown.innerHTML = hours + "H:" + minutes + "M:" + seconds + "S";
+        countdown.innerHTML = hoursRemaining+ "H:" + minutesRemaining + "M:" + secondsRemaining + "S";
         return [];
     }
 }
@@ -214,7 +217,9 @@ function archive() {
 function answerResolution() {
     if (localStorage.getItem("Answered") === "Correct") {
         answerContent.innerHTML = "<h2>You Got It!</h2>" + "<span class=\"answerTitle\">The answer was:</span> " + answers[puzzleSelect].Name + "</p><span class=\"answerTitle\">Next puzzle in:</span> " + "<span id=\"countdown\"></span>" + "<p><span id=\"archives\">View the Archives</span>";
+        // Display countdown timer without initial delay
         window.setTimeout(getTimeRemaining, 0);
+        // Calls countdown timer function to update every second
         countdownID = window.setInterval(getTimeRemaining, 1000);
         document.getElementById("archives").addEventListener("click", function () { archive(); });
         archiveEnabled = false;
@@ -256,6 +261,7 @@ function guessingGame() {
         answerCheck(answerSubmission.value);
         // Change styling of puzzle image to increase dimensions based on incorrect answer
         let test = image.style.clipPath;
+        // Update image dimensions shown based on incorrect guesses
         let answer = (test.replace("%\)", "").replace("inset\(", "")) / ((0.25 * guesses) + 0.75);
         image.style.clipPath = "inset\(" + answer + "%\)";
         localStorage.setItem("guesses", guesses);
