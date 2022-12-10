@@ -2,14 +2,14 @@
 var initialDate = new Date(2022, 10, 15);
 var currentDate = new Date();
 var guesses;
-let tests = [];
+let textMatches = [];
 let comparisonTest = '';
 let guessResults = document.getElementById("guessValues").children;
 let puzzleImage = document.getElementById("dailyImage");
 let hintList = document.getElementById("hints");
 let answerContent = document.getElementById("answerContent");
 let image;
-let timerID;
+let countdownID;
 let dropdown;
 let puzzleSelect;
 let archiveEnabled;
@@ -123,15 +123,15 @@ function createPuzzle(overallDays) {
     answerResolution();
 }
 // Determine relevant answers for dropdown to display based on form text input
-function comparison(testVal) {
+function comparison(comparisonValue) {
     try {
-        comparisonTest = new RegExp(testVal, "i");
-        if (testVal === "") {
+        comparisonTest = new RegExp(comparisonValue, "i");
+        if (comparisonValue === "") {
             return [];
         }
         for (var i = 0; i < films[0].Name.length; i++) {
             if (films[0].Name[i].match(comparisonTest)) {
-                tests.push(films[0].Name[i]);
+                textMatches.push(films[0].Name[i]);
             }
         }
     }
@@ -139,7 +139,7 @@ function comparison(testVal) {
     catch (e) {
         alert("Your answer contains invalid characters");
     }
-    return tests;
+    return textMatches;
 }
 
 // Adds the answers found by comparison function to dropdown list
@@ -198,7 +198,7 @@ function archive() {
             // Reloads the text input form after button is clicked to retrieve previous puzzle
             $("#answerContent").load(location.href + " #answerContent");
             // Stop countdown timer function from running when answerContent div is reloaded
-            window.clearInterval(timerID);
+            window.clearInterval(countdownID);
             // Retrieves previous puzzle after click on archive button
             archiveRetrieve = this.value;
             createPuzzle(archiveRetrieve);
@@ -215,15 +215,15 @@ function answerResolution() {
     if (localStorage.getItem("Answered") === "Correct") {
         answerContent.innerHTML = "<h2>You Got It!</h2>" + "<span class=\"answerTitle\">The answer was:</span> " + answers[puzzleSelect].Name + "</p><span class=\"answerTitle\">Next puzzle in:</span> " + "<span id=\"countdown\"></span>" + "<p><span id=\"archives\">View the Archives</span>";
         window.setTimeout(getTimeRemaining, 0);
-        timerID = window.setInterval(getTimeRemaining, 1000);
+        countdownID = window.setInterval(getTimeRemaining, 1000);
         document.getElementById("archives").addEventListener("click", function () {archive();});
         archiveEnabled=false;
     }
     else if (localStorage.getItem("Answered") === "Incorrect" && guesses === 6) {
         image.style.clipPath = "inset\(0\)";
-        answerContent.innerHTML = "<h2>Unlucky</h2>" + "<p><span class=\"answerTitle\">The answer was:</span> " + answers[puzzleSelect].Name + "</p><span class=\"answerTitle\">Next puzzle in:</span> " + "<span id=\"countdown\"></span>" + "<p><span id=\"archives\" tabindex=\"0\">View the Archives</span>";
+        answerContent.innerHTML = "<h2>Unlucky!</h2>" + "<p><span class=\"answerTitle\">The answer was:</span> " + answers[puzzleSelect].Name + "</p><span class=\"answerTitle\">Next puzzle in:</span> " + "<span id=\"countdown\"></span>" + "<p><span id=\"archives\" tabindex=\"0\">View the Archives</span>";
         window.setTimeout(getTimeRemaining, 0);
-        timerID = window.setInterval(getTimeRemaining, 1000);
+        countdownID = window.setInterval(getTimeRemaining, 1000);
         document.getElementById("archives").addEventListener("click", function () { archive();});
         archiveEnabled=false;
     }
