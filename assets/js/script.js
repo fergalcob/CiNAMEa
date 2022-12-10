@@ -12,6 +12,8 @@ let image;
 let timerID;
 let dropdown;
 let puzzleSelect;
+let archiveEnabled;
+let archiveRetrieve;
 
 initialDate.setHours(0, 0, 0, 0);
 currentDate.setHours(0, 0, 0, 0);
@@ -172,13 +174,24 @@ function addHints(newHint) {
 // On click to view the archive, create the archive buttons for the puzzles until this point
 function archive() {
     let archiveSection = document.getElementById("archive");
+    if(archiveEnabled===false){
     for (var i = 0; i < timeDifference; i++) {
         let archiveItem = document.createElement("button");
         archiveItem.setAttribute('class', "archiveButton");
         archiveItem.setAttribute('value', i);
+        archiveItem.setAttribute('id', i);
         archiveItem.innerHTML = "<p>" + (i + 1) + "</p>";
         archiveSection.appendChild(archiveItem);
-    }
+        // Prevent archive from being written multiple times
+        }
+        archiveEnabled=true;
+        // Prevent same archive button from being pressed multiple times in a row
+        if(archiveRetrieve!==undefined){
+            let deactivateButton = document.getElementById(archiveRetrieve);
+            deactivateButton.disabled = true;
+            deactivateButton.style.backgroundColor = "#797979";
+        }
+}
     var btn = document.getElementsByClassName("archiveButton");
     for (i = 0; i < btn.length; i++) {
         btn[i].addEventListener("click", function () {
@@ -186,7 +199,9 @@ function archive() {
             $("#answerContent").load(location.href + " #answerContent");
             // Stop countdown timer function from running when answerContent div is reloaded
             window.clearInterval(timerID);
-            createPuzzle(this.value);
+            // Retrieves previous puzzle after click on archive button
+            archiveRetrieve = this.value;
+            createPuzzle(archiveRetrieve);
             // Remove hints and archive buttons for the currently answered puzzle
             var hintRemoval = document.getElementById("hints");
             while (hintRemoval.firstChild) { hintRemoval.removeChild(hintRemoval.firstChild);}
@@ -195,11 +210,6 @@ function archive() {
     }
 }
 
-// Retrieves previous puzzle after click on archive button
-function retrievePuzzle() {
-    let archiveRetrieve = this.value;
-    createPuzzle(archiveRetrieve);
-}
 // Replaces answer submission on correct answer/6 incorrect guesses and starts countdown to next puzzle
 function answerResolution() {
     if (localStorage.getItem("Answered") === "Correct") {
@@ -207,6 +217,7 @@ function answerResolution() {
         window.setTimeout(getTimeRemaining, 0);
         timerID = window.setInterval(getTimeRemaining, 1000);
         document.getElementById("archives").addEventListener("click", function () {archive();});
+        archiveEnabled=false;
     }
     else if (localStorage.getItem("Answered") === "Incorrect" && guesses === 6) {
         image.style.clipPath = "inset\(0\)";
@@ -214,6 +225,7 @@ function answerResolution() {
         window.setTimeout(getTimeRemaining, 0);
         timerID = window.setInterval(getTimeRemaining, 1000);
         document.getElementById("archives").addEventListener("click", function () { archive();});
+        archiveEnabled=false;
     }
     else {
         return [];
