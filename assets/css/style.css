@@ -296,4 +296,7 @@ header {
     #hintSection{
         font-size:1.5em;
     }
+    #answers li{
+        font-size: 0.65em;
+    }
 }
