@@ -146,13 +146,13 @@ function comparison(comparisonValue) {
 }
 
 // Adds the answers found by comparison function to dropdown list
-function answerCheck(testVal) {
+function answerCheck(textFragments) {
     dropdown = document.getElementById("answers");
     let listItem = '';
-    tests = [];
-    tests = comparison(testVal);
-    for (var i = 0; i < tests.length && i < 20; i++) {
-        listItem += '<li onclick="autoFill(this.textContent)">' + tests[i] + '</li>';
+    textMatches = [];
+    textMatches = comparison(textFragments);
+    for (var i = 0; i < textMatches.length && i < 20; i++) {
+        listItem += '<li onclick="autoFill(this.textContent)">' + textMatches[i] + '</li>';
     }
     dropdown.innerHTML = "<ul>" + listItem + "</ul>";
 }
@@ -185,8 +185,8 @@ function archive() {
             archiveItem.setAttribute('id', i);
             archiveItem.innerHTML = "<p>" + (i + 1) + "</p>";
             archiveSection.appendChild(archiveItem);
-            // Prevent archive from being written multiple times
         }
+        // Prevent archive from being written multiple times
         archiveEnabled = true;
         // Prevent same archive button from being pressed multiple times in a row
         if (archiveRetrieve !== undefined) {
@@ -270,14 +270,6 @@ function guessingGame() {
     }
 }
 
-// Waits for enter press within text input to prevent page refresh and activate submit button in place of it
-document.addEventListener("keypress", function (event) {
-    if (event.key === "Enter" && event.target.closest("#answer")) {
-        event.preventDefault();
-        document.getElementById("submitAnswer").click();
-    }
-});
-
 // Waits for enter press on help button to open via keyboard controls
 document.addEventListener("keypress", function (event) {
     if (event.key === "Enter" && event.target.closest("#help")) {
@@ -293,6 +285,11 @@ document.addEventListener("keypress", function (event) {
     else if (event.key === "Enter" && event.target.closest("#archives")) {
         event.preventDefault();
         document.getElementById("archives").click();
+    }
+    // Waits for enter press within text input to prevent page refresh and activate submit button in place of it
+    else if(event.key === "Enter" && event.target.closest("#answer")) {
+        event.preventDefault();
+        document.getElementById("submitAnswer").click();
     }
 });
 
