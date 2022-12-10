@@ -90,6 +90,7 @@ header {
     align-self: flex-start;
     line-height: 1.2;
 }
+
 /* Styling of the help overlay */
 #overlay {
     position: fixed;
@@ -169,8 +170,8 @@ header {
     background-color: #e9e9e9;
 }
 
-#guessValues{
-    margin:7px auto;
+#guessValues {
+    margin: 7px auto;
 }
 
 /* Structuring of the archives and styling for the section & associated archive buttons */
@@ -200,6 +201,7 @@ header {
     cursor: pointer;
 
 }
+
 .archiveButton:hover {
     background-color: #797979;
 }
@@ -218,11 +220,13 @@ header {
     display: inline-block;
     margin: 7px;
 }
+
 .answers:after {
     content: "";
-    display:inline-block;
+    display: inline-block;
     padding-bottom: 100%;
-  }
+}
+
 /* Structure of the puzzle_layout section for mobile devices to allow for single column-display */
 #puzzle_layout {
     margin: 10px auto;
@@ -241,7 +245,7 @@ header {
 
 #hintSection {
     grid-area: 2 / 1;
-    margin-top:1%;
+    margin-top: 1%;
 }
 
 #dailyImage img {
@@ -260,8 +264,10 @@ header {
     list-style: none;
     line-height: 1.5;
 }
+
 /* Styling for higher resolution devices */
 @media screen and (min-width:750px) {
+
     /* Switch puzzle layout from single-column to dual-column display */
     #puzzle_layout {
         margin: 10px auto;
@@ -279,7 +285,7 @@ header {
 
     #hintSection {
         grid-area: 1 / 2;
-        margin-top:0;
+        margin-top: 0;
     }
 
     /* Increase size of guess boxes beneath answer form */
@@ -292,14 +298,17 @@ header {
         width: 30%;
     }
 }
+
 @media screen and (min-width:1050px) {
-    #answerContent{
-        font-size:1.4em;
+    #answerContent {
+        font-size: 1.4em;
     }
-    #hintSection{
-        font-size:1.5em;
+
+    #hintSection {
+        font-size: 1.5em;
     }
-    #answers li{
+
+    #answers li {
         font-size: 0.5em;
     }
 }

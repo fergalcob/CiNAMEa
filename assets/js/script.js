@@ -155,7 +155,7 @@ function answerCheck(testVal) {
 }
 function autoFill(selected) {
     document.getElementById("answer").value = selected;
-    while (dropdown.firstChild) { dropdown.removeChild(dropdown.firstChild);}
+    while (dropdown.firstChild) { dropdown.removeChild(dropdown.firstChild); }
 }
 document.getElementById("answerContent").addEventListener("keyup", function (e) {
     if (e.target) {
@@ -174,24 +174,24 @@ function addHints(newHint) {
 // On click to view the archive, create the archive buttons for the puzzles until this point
 function archive() {
     let archiveSection = document.getElementById("archive");
-    if(archiveEnabled===false){
-    for (var i = 0; i < timeDifference; i++) {
-        let archiveItem = document.createElement("button");
-        archiveItem.setAttribute('class', "archiveButton");
-        archiveItem.setAttribute('value', i);
-        archiveItem.setAttribute('id', i);
-        archiveItem.innerHTML = "<p>" + (i + 1) + "</p>";
-        archiveSection.appendChild(archiveItem);
-        // Prevent archive from being written multiple times
+    if (archiveEnabled === false) {
+        for (var i = 0; i < timeDifference; i++) {
+            let archiveItem = document.createElement("button");
+            archiveItem.setAttribute('class', "archiveButton");
+            archiveItem.setAttribute('value', i);
+            archiveItem.setAttribute('id', i);
+            archiveItem.innerHTML = "<p>" + (i + 1) + "</p>";
+            archiveSection.appendChild(archiveItem);
+            // Prevent archive from being written multiple times
         }
-        archiveEnabled=true;
+        archiveEnabled = true;
         // Prevent same archive button from being pressed multiple times in a row
-        if(archiveRetrieve!==undefined){
+        if (archiveRetrieve !== undefined) {
             let deactivateButton = document.getElementById(archiveRetrieve);
             deactivateButton.disabled = true;
             deactivateButton.style.backgroundColor = "#797979";
         }
-}
+    }
     var btn = document.getElementsByClassName("archiveButton");
     for (i = 0; i < btn.length; i++) {
         btn[i].addEventListener("click", function () {
@@ -204,8 +204,8 @@ function archive() {
             createPuzzle(archiveRetrieve);
             // Remove hints and archive buttons for the currently answered puzzle
             var hintRemoval = document.getElementById("hints");
-            while (hintRemoval.firstChild) { hintRemoval.removeChild(hintRemoval.firstChild);}
-            while (archiveSection.firstChild) { archiveSection.removeChild(archiveSection.firstChild);}
+            while (hintRemoval.firstChild) { hintRemoval.removeChild(hintRemoval.firstChild); }
+            while (archiveSection.firstChild) { archiveSection.removeChild(archiveSection.firstChild); }
         });
     }
 }
@@ -216,16 +216,16 @@ function answerResolution() {
         answerContent.innerHTML = "<h2>You Got It!</h2>" + "<span class=\"answerTitle\">The answer was:</span> " + answers[puzzleSelect].Name + "</p><span class=\"answerTitle\">Next puzzle in:</span> " + "<span id=\"countdown\"></span>" + "<p><span id=\"archives\">View the Archives</span>";
         window.setTimeout(getTimeRemaining, 0);
         countdownID = window.setInterval(getTimeRemaining, 1000);
-        document.getElementById("archives").addEventListener("click", function () {archive();});
-        archiveEnabled=false;
+        document.getElementById("archives").addEventListener("click", function () { archive(); });
+        archiveEnabled = false;
     }
     else if (localStorage.getItem("Answered") === "Incorrect" && guesses === 6) {
         image.style.clipPath = "inset\(0\)";
         answerContent.innerHTML = "<h2>Unlucky!</h2>" + "<p><span class=\"answerTitle\">The answer was:</span> " + answers[puzzleSelect].Name + "</p><span class=\"answerTitle\">Next puzzle in:</span> " + "<span id=\"countdown\"></span>" + "<p><span id=\"archives\" tabindex=\"0\">View the Archives</span>";
         window.setTimeout(getTimeRemaining, 0);
         countdownID = window.setInterval(getTimeRemaining, 1000);
-        document.getElementById("archives").addEventListener("click", function () { archive();});
-        archiveEnabled=false;
+        document.getElementById("archives").addEventListener("click", function () { archive(); });
+        archiveEnabled = false;
     }
     else {
         return [];
@@ -252,7 +252,7 @@ function guessingGame() {
         guessResults[guesses].style.backgroundColor = "#D30000";
         guesses++;
         // Reset text input field on submission of guess
-        answerSubmission.value="";
+        answerSubmission.value = "";
         answerCheck(answerSubmission.value);
         // Change styling of puzzle image to increase dimensions based on incorrect answer
         let test = image.style.clipPath;
@@ -283,7 +283,7 @@ document.addEventListener("keypress", function (event) {
         event.preventDefault();
         document.getElementById("closeOverlay").click();
     }
-     // Waits for enter press on archive button to open via keyboard controls to create archive list
+    // Waits for enter press on archive button to open via keyboard controls to create archive list
     else if (event.key === "Enter" && event.target.closest("#archives")) {
         event.preventDefault();
         document.getElementById("archives").click();
