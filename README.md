@@ -22,7 +22,6 @@
    * [W3C Validator & Lighthouse Testing](#w3c-validator--lighthouse-testing)
    * [Jigsaw Validation Of CSS](#jigsaw-validation-of-css)
    * [JSHint Validation Of Javascript](#jshint-validation-of-javascript)
-   * [Currently Known Issues](#currently-known-issues)
    * [Solved Issues](#solved-issues)
 - [Deployment](#deployment)
   * [Github Pages](#github-pages)
@@ -184,16 +183,12 @@ The favicon was personally created the site, reusing the filmstrip imagery from 
 ### JSHint Validation Of Javascript
 ![Testing Results - JS](readme/jshint-test-results.png)
 
-### Currently Known Issues
-
-1. When using Firefox on Android mobile devices, on the Contact page, when scrolling with the dynamic address bar enabled and is positioned at the bottom of the screen, when the address bar is hidden due to the scroll, there is empty space left where the address bar would be until the scrolling reaches the footer. This has been reported as a bug previously [here](https://github.com/mozilla-mobile/fenix/issues/8768) however the workarounds suggested there did not resolve this instance of the issue.
-
 ### Solved Issues
 
-1. The banner images on the Index, Basics & Specifics pages were reported to introduce a horizontal scrollbar on browsers with a non-autohiding vertical scrollbar due to the 100vw width that was initially in place for those banner images.
- - Issue resolved by switching to 100% width rather than viewport width
-2. On some devices, the code snippet on the Basics page was escaping the div it was contained in causing the page to scroll to the right.
- - Added "word-break: break-word;" to the styling for this section in addition to the pre-existing "white-space: pre-line;" to support a wider range of devices
+1. It was possible to click the view archive option multiple times causing the archive list to be written to the page as many times as the text was clicked
+ - Set counter on click of the archive content to prevent the function being called more than once
+2. If the same puzzle was chosen twice in a row from the archives, the guesses counter did not reset correctly and so prevented the user from submitting their answers and proceed with the puzzle
+ - Set the chosen puzzle to variable which then disabled the chosen archive button on subsequent access to prevent repeats
 
 ## Deployment
 
@@ -222,9 +217,9 @@ The favicon was personally created the site, reusing the filmstrip imagery from 
   - Used for generating the favicon set and code from the personally  created icon
 
 ## Credits
-* Banner images courtesy of [123rf.com](https://www.123rf.com/)
+* Fonts used courtesy of [FontsFree](https://fontsfree.net/), [Google Fonts](https://fonts.google.com/) and [Font Space](https://www.fontspace.com/)
 * Movie posters used for the daily puzzles courtesy of [MovieMania](https://www.moviemania.io/)
 * Help Overlay & Overlay Close Icons from [Font Awesome](https://fontawesome.com/)
-* [W3CSchools](https://www.w3schools.com/) for their tutorial & code on overlay creation
+* [W3CSchools](https://www.w3schools.com/) for their tutorial & code on overlay creation & basis for autocomplete dropdown
 
 
