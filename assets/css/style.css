@@ -200,6 +200,9 @@ header {
     cursor: pointer;
 
 }
+.archiveButton:hover {
+    background-color: #797979;
+}
 
 .archiveButton p {
     display: table-cell;
